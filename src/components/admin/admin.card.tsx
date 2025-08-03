@@ -7,7 +7,7 @@ const AdminCard = () => {
         <Row gutter={16}>
             <Col span={8}>
                 <Card title="Card title" variant="borderless">
-                    Card content
+                    Card tốt
                 </Card>
             </Col>
             <Col span={8}>

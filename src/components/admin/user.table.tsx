@@ -1,6 +1,6 @@
 
 'use client'
-import { handleDeleteUserAction } from "@/utils/actions";
+import { handleDeleteUserAction } from "@/utils/user.actions";
 import { DeleteTwoTone, EditTwoTone } from "@ant-design/icons";
 import { Button, Popconfirm, Table } from "antd"
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';

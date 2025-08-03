@@ -7,6 +7,12 @@ interface IUser {
     email: string;
     access_token: string;
 }
+interface Category {
+    _id?: string;
+    name: string;
+    image: string;
+}
+
 declare module "next-auth/jwt" {
     /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
     interface JWT {

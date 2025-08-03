@@ -1,4 +1,4 @@
-import { handleUpdateUserAction } from '@/utils/actions';
+import { handleUpdateUserAction } from '@/utils/user.actions';
 import {
     Modal, Input,
     Form, Row, Col, message,

@@ -1,7 +1,7 @@
 const ManageProductPage = () => {
     return (
         <div>
-            ManageProductPage page
+            ManageMenu
         </div>
     )
 }

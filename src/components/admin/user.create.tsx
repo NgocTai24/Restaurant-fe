@@ -1,5 +1,5 @@
 
-import { handleCreateUserAction } from '@/utils/actions';
+import { handleCreateUserAction } from '@/utils/user.actions';
 import {
     Modal, Input, Form, Row, Col, message,
     notification
