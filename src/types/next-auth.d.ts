@@ -13,6 +13,31 @@ interface Category {
     image: string;
 }
 
+interface Subcategory {
+  _id?: string;
+  name: string;
+  category: string; // ObjectId dưới dạng string
+}
+
+interface MenuItem {
+  _id?: string;
+  name: string;
+  subcategory: string;
+  price: number;
+  image: string;
+  isAvailable?: boolean;
+  description?: string;
+}
+
+interface UpdateMenuItemDto {
+  name?: string;
+  subcategory?: string;
+  price?: number;
+  image?: string;
+  isAvailable?: boolean;
+  description?: string;
+}
+
 declare module "next-auth/jwt" {
     /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
     interface JWT {

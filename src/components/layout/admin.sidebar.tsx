@@ -2,12 +2,11 @@
 import Layout from "antd/es/layout";
 import Menu from "antd/es/menu";
 import {
-   AppstoreOutlined,
-   GiftOutlined,
-   MailOutlined,
-   SettingOutlined,
+   DashboardOutlined,
    TeamOutlined,
-   UnorderedListOutlined, // Icon cho Manage Categories
+   ShopOutlined,
+   FolderOutlined,
+   FolderOpenOutlined,
 } from '@ant-design/icons';
 import React, { useContext } from 'react';
 import { AdminContext } from "@/library/admin.context";
@@ -29,7 +28,7 @@ const AdminSideBar = () => {
             {
                key: "dashboard",
                label: <Link href={"/dashboard"}>Dashboard</Link>,
-               icon: <AppstoreOutlined />,
+               icon: <DashboardOutlined />,
             },
             {
                key: "users",
@@ -37,44 +36,19 @@ const AdminSideBar = () => {
                icon: <TeamOutlined />,
             },
             {
-               key: "products",
-               label: <Link href={"/dashboard/product"}>Manage Menu</Link>,
-               icon: <GiftOutlined />,
-            },
-            {
                key: "categories",
                label: <Link href={"/dashboard/categories"}>Manage Categories</Link>,
-               icon: <UnorderedListOutlined />,
+               icon: <FolderOutlined />,
             },
             {
                key: "subcategories",
                label: <Link href={"/dashboard/subcategories"}>Manage Subcategories</Link>,
-               icon: <UnorderedListOutlined />,
+               icon: <FolderOpenOutlined />,
             },
             {
-               key: 'sub1',
-               label: 'Navigation One',
-               icon: <MailOutlined />,
-               children: [
-                  {
-                     key: 'g1',
-                     label: 'Item 1',
-                     type: 'group',
-                     children: [
-                        { key: '1', label: 'Option 1' },
-                        { key: '2', label: 'Option 2' },
-                     ],
-                  },
-                  {
-                     key: 'g2',
-                     label: 'Item 2',
-                     type: 'group',
-                     children: [
-                        { key: '3', label: 'Option 3' },
-                        { key: '4', label: 'Option 4' },
-                     ],
-                  },
-               ],
+               key: "products",
+               label: <Link href={"/dashboard/product"}>Manage Menu</Link>,
+               icon: <ShopOutlined />,
             },
          ],
       },
@@ -83,12 +57,13 @@ const AdminSideBar = () => {
    return (
       <Sider
          collapsed={collapseMenu}
+         style={{ background: '#fff', height: '100vh' }} // Thêm background trắng để nổi bật
       >
          <Menu
             mode="inline"
             defaultSelectedKeys={['dashboard']}
             items={items}
-            style={{ height: '100vh' }}
+            style={{ height: '100%', borderRight: 0 }} // Loại bỏ border phải để liền mạch
          />
       </Sider>
    );
